@@ -147,8 +147,8 @@ puts "creating recipient accounts"
 pedro = RecipientAccount.new(holder_id: "43.210.987-2", holder_name: "Pedro Iannuchi Gómez", number: "4321098765432109", institution: "Banco del Pacífico")
 pedro.save!
 
-maria = RecipientAccount.new(holder_id: "65.432.109-8", holder_name: "María Torres Ramírez", number: "6543210987654321", institution: "Banco Meridional")
-maria.save!
+max = RecipientAccount.new(holder_id: "65.432.109-8", holder_name: "Maximiliam Kaiser", number: "6543210987654321", institution: "Banco Meridional")
+max.save!
 
 jimena = RecipientAccount.new(holder_id: "21.098.765-4", holder_name: "Jimena Martinez Muñóz", number: "2109876543210987", institution: "Banco Austral")
 jimena.save!
@@ -245,7 +245,7 @@ movement1 = Movement.new(bank_account: alejandro_bank_account, fintoc_account: a
 movement1.save!
 
 movement2 = Movement.new(bank_account: alejandro_bank_account, fintoc_account: alejandro_fintoc_account, currency: "CLP", amount: 150000, description: "El prestamo para la mesa nueva",
-  transaction_date: "2022-09-23".to_date, movement_type: "transaction", pending: false, recipient_account: maria)
+  transaction_date: "2022-09-23".to_date, movement_type: "transaction", pending: false, recipient_account: max)
 movement2.save!
 
 movement3 = Movement.new(bank_account: alejandro_bank_account, fintoc_account: alejandro_fintoc_account, currency: "CLP", amount: 10000, description: "por el helado",
@@ -290,8 +290,8 @@ movement12 = Movement.new(bank_account: alejandro_bank_account, fintoc_account: 
   transaction_date: "2023-06-02".to_date, movement_type: "transaction", pending: false, recipient_account: jimena)
 movement12.save!
 
-movement13 = Movement.new(bank_account: alejandro_bank_account, fintoc_account: alejandro_fintoc_account, currency: "CLP", amount: 150000, description: "Transferencia a cuenta de amiga",
-  transaction_date: "2023-06-15".to_date, movement_type: "transaction", pending: false, recipient_account: maria)
+movement13 = Movement.new(bank_account: alejandro_bank_account, fintoc_account: alejandro_fintoc_account, currency: "CLP", amount: 150000, description: "Transferencia a cuenta de amigo",
+  transaction_date: "2023-06-15".to_date, movement_type: "transaction", pending: false, recipient_account: max)
 movement13.save!
 
 movement131 = Movement.new(bank_account: alejandro_bank_account, fintoc_account: alejandro_fintoc_account, currency: "CLP", amount: 50000, description: "Retiro en cajero automático",
@@ -421,7 +421,7 @@ puts "creating favorites"
 fav1 = FavoriteRecipientAccount.new(user: alejandro, recipient_account: pedro)
 fav1.save!
 
-fav2 = FavoriteRecipientAccount.new(user: alejandro, recipient_account: maria)
+fav2 = FavoriteRecipientAccount.new(user: alejandro, recipient_account: max)
 fav2.save!
 
 fav3 = FavoriteRecipientAccount.new(user: alejandro, recipient_account: julian)
